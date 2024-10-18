@@ -58,7 +58,7 @@ body {
 header {
     background-color: #00bcd4; /* Teal */
     color: white;
-    padding: 60px 20px 20px; /* Space for the logo and text */
+    padding: 20px; /* Space for the logo and text */
     text-align: center;
     position: relative; /* Ensure logo is positioned relative to header */
 }
