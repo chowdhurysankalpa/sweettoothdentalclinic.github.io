@@ -67,7 +67,7 @@ header {
 .logo {
     width: 100px; /* Adjust size as needed */
     height: auto;
-    position: absolute; /* Position relative to the viewport */
+    position: fixed; /* Changed to fixed to keep it in a consistent position */
     top: 75px; /* Distance from the top */
     left: 50px; /* Distance from the left */
     z-index: 1000; /* Ensure it appears above other content */
