@@ -18,11 +18,11 @@
     margin: 0 5px;
     background-color: #00bcd4; /* Teal color */
     border-radius: 50%;
-    animation: bounce 0.8s infinite alternate; /* Bounce animation */
+    animation: bounce 0.6s infinite alternate; /* Bounce animation */
 }
 
 .dot:nth-child(2) {
-    animation-delay: 0.3s; /* Delay for the second dot */
+    animation-delay: 0.2s; /* Delay for the second dot */
 }
 
 .dot:nth-child(3) {
@@ -35,6 +35,16 @@
 }
 
 /* Fade-in effect for main content */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Body styles */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -45,32 +55,12 @@ body {
     animation: fadeIn 1s ease-in; /* Apply fade-in animation */
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /* Header styles */
 header {
     background-color: #00bcd4; /* Teal */
     color: white;
-    padding: 20px; /* Space for the logo and text */
+    padding: 20px;
     text-align: center;
-    position: relative; /* Ensure logo is positioned relative to header */
-}
-
-/* Logo styles */
-.logo {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    position: fixed; /* Changed to fixed to keep it in a consistent position */
-    top: 75px; /* Distance from the top */
-    left: 50px; /* Distance from the left */
-    z-index: 1000; /* Ensure it appears above other content */
 }
 
 /* Navigation styles */
@@ -110,6 +100,7 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Image styles */
 .responsive {
     width: 100%;
     height: auto;
@@ -119,7 +110,7 @@ section {
     margin-bottom: 20px; /* Space below images */
 }
 
-/* Section heading styles */
+/* Heading styles */
 h2 {
     color: #00bcd4; /* Teal */
     border-bottom: 2px solid #00bcd4;
@@ -148,4 +139,111 @@ footer p {
 
 /* Contact section styles */
 #contact p {
-    margin: 5px
+    margin: 5px 0; /* Reduce the top and bottom margin */
+}
+
+#contact h2 {
+    margin-bottom: 15px; /* Space under the heading */
+}
+
+/* Optional: Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    section {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light sky blue */
+    color: #333;
+}
+
+header {
+    background-color: #00bcd4; /* Teal */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* Medium weight */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcccb; /* Lighter pink for contrast */
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px; /* Centered max width for better readability */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom */
+    right: 30px;   /* Distance from the right */
+    background-color: #007bff; /* Button color */
+    color: white;  /* Text color */
+    border: none;  /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    z-index: 1000; /* Make sure it’s on top */
+    font-size: 16px; /* Default font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+#backToTop:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #backToTop {
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+        right: 20px; /* Adjust right position */
+    }
+}
+
+@media (max-width: 400px) {
+    #backToTop {
+        padding: 6px 10px; /* Further adjust padding */
+        font-size: 12px; /* Further reduce font size */
+    }
+}
